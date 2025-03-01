@@ -3,6 +3,7 @@ import { InstagramEmbed } from 'react-social-media-embed';
 export default function InstaComponent() {
 
     const urls = [
+        "https://www.instagram.com/p/DGpr43gMFmV/",
         "https://www.instagram.com/p/DGl9P3tsAwC/",
         "https://www.instagram.com/p/DGeF4gSs-Uf/",
         "https://www.instagram.com/p/DF2ZVEjM7t7/",
