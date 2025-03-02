@@ -1,6 +1,4 @@
-import InstaComponent from "./components/InstaComponent";
 import Logo from "./assets/logo.png"
-import HomeBanner from "./assets/home-banner.webp"
 
 export default function Home() {
   return (
