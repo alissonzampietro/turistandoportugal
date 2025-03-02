@@ -15,9 +15,9 @@ export default function InstaComponent() {
     ]
     return (
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8 justify-center items-center max-w-full mt-20'>
-            {urls.map((url) => {
+            {urls.map((url, pos) => {
                 return (
-                    <InstagramEmbed url={url} width={328} />
+                    <InstagramEmbed url={url} key={pos} width={328} captioned={false} />
                 )
             }
             )}

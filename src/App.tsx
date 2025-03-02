@@ -1,46 +1,25 @@
-import React, { useState, useEffect } from "react";
 import InstaComponent from "./components/InstaComponent";
 import Logo from "./assets/logo.png"
-import InstagramProfile from "./components/InstagramProfile";
+import HomeBanner from "./assets/home-banner.webp"
 
 export default function Home() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setMessage("Obrigado por se inscrever!");
-  };
-
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4 font-poppins">
-      <div className="flex items-center mb-10">
-        <img src={Logo} width={100} className="pr-4" />
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">Turistando Portugal</h1>
+    <>
+      <div className="min-h-screen w-full absolute bg-black">
       </div>
-      <p className="text-gray-600 mb-6 text-center max-w-lg">
-        Descubra os melhores destinos de Portugal! Explore praias, montanhas, cidades históricas e muito mais.
-      </p>
-
-      <form onSubmit={handleSubscribe} className="bg-white p-6 rounded-lg shadow-md flex flex-col gap-4">
-        <input
-          type="email"
-          placeholder="Seu e-mail"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="border border-gray-300 p-2 rounded-md w-72"
-          required
-        />
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
-        >
-          Inscrever-se
-        </button>
-      </form>
-      {message && <p className="text-green-600 mt-4">{message}</p>}
-      {/* <InstagramProfile /> */}
-      <InstaComponent />
-    </div>
+      <div className="opacity-80 bg-[url(/src/assets/home-banner.webp)] min-h-screen w-full absolute bg-cover bg-center">
+      </div>
+      <div className="p-4 font-poppins relative md:mx-15 md:pt-30">
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          <img src={Logo} width={100} className="mr-5 pt-5" />
+          <div>
+            <h1 className="text-[50px] md:text-[72px] mb-4 text-white text-center md:text-left text-base/18">Turistando <br /> Portugal</h1>
+            <p className="text-white mb-6 max-w-lg text-[18px]">
+              Descubra os melhores destinos de Portugal
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
